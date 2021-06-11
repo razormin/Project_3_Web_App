@@ -1,0 +1,16 @@
+<!--- Register Template --->
+
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+  <form method="post" action="{% url 'users:register' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button name="submit">Register</button>
+    <!--- Where to redirect user after successful login - index is the home page --->
+    <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+  </form>
+  
+{% endblock content %}
