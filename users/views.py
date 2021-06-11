@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login 
+from django.contrib.auth import logout
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -35,4 +36,4 @@ def register(request):
 def logout_view(request):
 	"""Log the user out"""
 	logout(request)
-	return redirect('/logged_out.html')
+	return redirect('registration/logged_out.html')

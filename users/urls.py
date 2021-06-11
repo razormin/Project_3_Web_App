@@ -1,8 +1,6 @@
 """Defines URL patterns for users"""
 
 from django.urls import path, include
-#from django.contrib.auth import login
-
 from . import views
 
 app_name = 'users'
@@ -15,5 +13,5 @@ urlpatterns = [
     # Registration page.
     path('register/', views.register, name='register'),
     # Logout page
-    path('logout/', views.logout_view, name='logout')
+    path('logout/', views.logout_view, name='logout'),
 ]
