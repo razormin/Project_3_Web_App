@@ -1,0 +1,17 @@
+<!--- New Entry Template --->
+
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+<!--- Shows user which topic they are adding to. Also links back to main page for topic --->
+  <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
+
+  <p>Add a new entry:></p>
+  <!--- includes topic_id so view can associate new entry with correct topic --->
+  <form action="{% url 'learning_logs:new_entry' topic.id %}" method = 'post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">add entry</button>
+  </form>
+
+{% endblock content %}
