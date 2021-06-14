@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-7836d5=w2-sxm9z!dhe+)m)!n(u(00it1@syefl@yu=+53+!s0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['learning-log.herokuapp.com']
-
+# To view error pages locally
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'learning_log/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,6 +138,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # My settings
 LOGIN_URL = '/users/login/'
 
+# Heroku settings
+
 # Activate Django-Heroku
 
 django_heroku.settings(locals())
+
+# Allow only Heroku to host the project.
+ALLOWED_HOSTS = ['learning-log367.herokuapp.com']
+
+DEBUG = False
+
