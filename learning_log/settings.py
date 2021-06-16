@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7836d5=w2-sxm9z!dhe+)m)!n(u(00it1@syefl@yu=+53+!s0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # To view error pages locally
 ALLOWED_HOSTS = ['.localhost','learning-log-panorama.herokuapp.com']
