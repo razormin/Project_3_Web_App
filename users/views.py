@@ -12,8 +12,6 @@ def login_view(request):
 	if user is not None:
 		login(request, user)
 		return redirect('learning_logs:index')
-	else:
-		register()
 
 def register(request):
     """Register a new user."""
