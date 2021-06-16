@@ -145,7 +145,7 @@ LOGIN_URL = '/users/login/'
 django_heroku.settings(locals())
 
 # Allow only Heroku to host the project.
-ALLOWED_HOSTS = ['learning-log367.herokuapp.com']
+ALLOWED_HOSTS = ['learning-log-panorama.herokuapp.com']
 
 DEBUG = False
 
