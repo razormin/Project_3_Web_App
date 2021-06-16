@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-7836d5=w2-sxm9z!dhe+)m)!n(u(00it1@syefl@yu=+53+!s0
 DEBUG = False
 
 # To view error pages locally
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','learning-log-panorama.herokuapp.com']
 
 # Application definition
 
@@ -145,7 +145,6 @@ LOGIN_URL = '/users/login/'
 django_heroku.settings(locals())
 
 # Allow only Heroku to host the project.
-ALLOWED_HOSTS = ['learning-log-panorama.herokuapp.com']
 
-DEBUG = False
+# ALLOWED_HOSTS = ['learning-log-panorama.herokuapp.com']
 
