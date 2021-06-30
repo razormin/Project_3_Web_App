@@ -1,2 +1,2 @@
-# Project_3
-This is the Learning Log project from the Python Crash Course book
+# Project_3_Web_Application
+Learning to build a simple web application using Django, Bootstrap and Heroku
